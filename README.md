@@ -80,4 +80,6 @@ and finally, the peak data directory should look like:
     ├─599469
     │   ├─peaks.nii.gz
 ## Training
-### 
+### Train base tract segmentation model
+''python \train_model.py 
+''
