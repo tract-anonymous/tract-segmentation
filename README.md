@@ -80,6 +80,30 @@ and finally, the peak data directory should look like:
     ├─599469
     │   ├─peaks.nii.gz
 ## Training
-### Train base tract segmentation model
-''python \train_model.py 
-''
+### 1. Train base tract segmentation model (Teacher model)
+''python \train_model.py --action train_base_tract --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+### 2. Train novel tract segmentation model (Student model)
+''python \train_model.py --action train_novel_tract --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+## Testing
+''python \train_model.py --action test_novel_tract --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+
+## Comparison
+### CFT
+#### Train
+''python \train_model.py --action train_CFT --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+#### Test
+''python \train_model.py --action test_CFT --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+
+### IFT
+#### Train
+''python \train_model.py --action train_IFT --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+#### Test
+''python \train_model.py --action test_IFT --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+
+
+### TractSeg
+#### Train
+''python \train_model.py --action train_TractSeg --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+#### Test
+''python \train_model.py --action test_TractSeg --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir''
+
