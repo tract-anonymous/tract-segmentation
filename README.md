@@ -107,5 +107,5 @@ and finally, the peak data directory should look like:
 #### Test
 ``python \train_model.py --action test_TractSeg --data_dir your_data_dir --label_dir your_label_dir --ratio 1/2/5 --ckpt_dir your_ckpt_dir``
 
-## Ackonlwdgement
+## Acknowledgement
 Our code is based on [TractSeg](https://github.com/MIC-DKFZ/TractSeg).
