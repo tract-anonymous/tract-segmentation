@@ -141,8 +141,8 @@ class multi_trk_2_bin(threading.Thread):
 if __name__ == '__main__':
 
     parse=argparse.ArgumentParser()
-    parse.add_argument("--tract_dir",type=str,default="/home/hao/PycharmProjects/pythonProject/TractSeg-master/data/HCP105_Zenodo_NewTrkFormat/")
-    parse.add_argument("--ref_dir",type=str,default="/home/hao/HCP/")
+    parse.add_argument("--tract_dir",type=str,default="./HCP105_Zenodo_NewTrkFormat/")
+    parse.add_argument("--ref_dir",type=str,default="./HCP/")
     
     args = parse.parse_args()
     
